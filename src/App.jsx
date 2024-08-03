@@ -1,18 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import * as React from "react";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import { createTheme, ThemeProvider } from "@mui/material";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#3d52a0",
+    },
+    secondary: {
+      main: "#7091e6",
+    },
+    info: {
+      main: "#8697c4",
+    },
+    background: {
+      default: "#ede8f5",
+      paper: "#ede8f5",
+    },
+    text: {
+      primary: "rgba(0,0,0,0.68)",
+    },
+  },
+});
 
+export default function App() {
   return (
     <>
-      <div>
-        <h1>Test</h1>
-      </div>
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Projects />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
