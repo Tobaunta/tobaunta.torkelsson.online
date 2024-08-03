@@ -16,7 +16,7 @@ export default function Projects() {
           (technologies = ["HTML", "CSS", "React", "REST Countries API"])
         }
         github="https://github.com/Tobaunta/flag-app"
-        demo="https://flag-app.torkelsson.online"
+        demo="https://flag-app.tobaunta.torkelsson.online"
       />
       <Project
         name="Klarna Checkout"
@@ -36,7 +36,7 @@ export default function Projects() {
           (technologies = ["HTML", "CSS", "JavaScript"])
         }
         github="https://github.com/Tobaunta/password-generator"
-        demo="https://password-generator.torkelsson.online"
+        demo="https://password-generator.tobaunta.torkelsson.online"
       />
       <Project
         name="SL Reklamationsberäknare"
@@ -46,7 +46,7 @@ export default function Projects() {
           (technologies = ["HTML", "JavaScript"])
         }
         github="https://github.com/Tobaunta/sl-deduction-calculator"
-        demo="https://sl-deduction-calculator.torkelsson.online"
+        demo="https://sl-deduction-calculator.tobaunta.torkelsson.online"
       />
     </Box>
   );
