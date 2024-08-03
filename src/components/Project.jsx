@@ -28,7 +28,11 @@ export default function Project({
         flexDirection="row"
         gap={1}
         p={3}
-        sx={{ border: "1px solid lightgray", borderRadius: "10px", flexDirection: { md: "row", sm: "column", xs: "column" } }}
+        sx={{
+          border: "1px solid lightgray",
+          borderRadius: "10px",
+          flexDirection: { md: "row", sm: "column", xs: "column" },
+        }}
       >
         <Box display={"flex"} flexDirection={"column"} gap={3}>
           <Box fontWeight={"bold"} fontSize={"24px"}>
@@ -44,8 +48,21 @@ export default function Project({
           </Box>
         </Box>
         <Box display={"flex"} flexDirection={"column"} gap={3}>
-          <img src={image} width="350px" />
-          <Box display={"flex"} gap={1} flexWrap={"wrap"} justifyContent={"center"} alignContent={"center"}>{technologiesChips}</Box>
+          <Box
+            component="img"
+            src={image}
+            alt={name}
+            sx={{ width: {md: "350px", sm: "350px", xs: "280px"} }}
+          />
+          <Box
+            display={"flex"}
+            gap={1}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            alignContent={"center"}
+          >
+            {technologiesChips}
+          </Box>
         </Box>
       </Box>
     </Container>
