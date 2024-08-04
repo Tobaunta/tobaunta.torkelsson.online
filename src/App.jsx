@@ -22,7 +22,7 @@ const theme = createTheme({
       paper: "#ede8f5",
     },
     text: {
-      primary: "rgba(0,0,0,0.68)",
+      primary: "#000000ad",
     },
   },
 });
