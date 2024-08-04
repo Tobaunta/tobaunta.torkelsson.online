@@ -20,7 +20,9 @@ export default function Hero({ english }) {
           {english ? "ABOUT ME" : "OM MIG"}
         </Typography>
         <Typography variant="p" component="p" sx={{ margin: 5 }}>
-          {english ? "With over a decade of experience in software development, I have combined independent projects with formal training at Techover. During my time there, I refined my skills by developing a range of complex applications. Examples of projects include a password generator, an integration with Klarna Checkout and a comprehensive flag application." : "Med över ett decennium av erfarenhet inom mjukvaruutveckling, har jag kombinerat självständiga projekt med en formell utbildning hos Techover. Under min tid där har jag förfinat mina kunskaper genom att utveckla en rad komplexa applikationer. Exempel på projekt inkluderar en lösenordsgenerator, en integration med Klarna Checkout och en omfattande flagg-applikation."}
+          {english
+            ? "With over a decade of experience in software development, I have combined independent projects with formal training at Techover. During my time there, I refined my skills by developing a range of complex applications. Examples of projects include a password generator, an integration with Klarna Checkout and a comprehensive flag application."
+            : "Med över ett decennium av erfarenhet inom mjukvaruutveckling, har jag kombinerat självständiga projekt med en formell utbildning hos Techover. Under min tid där har jag förfinat mina kunskaper genom att utveckla en rad komplexa applikationer. Exempel på projekt inkluderar en lösenordsgenerator, en integration med Klarna Checkout och en omfattande flagg-applikation."}
         </Typography>
       </Box>
     </Box>
