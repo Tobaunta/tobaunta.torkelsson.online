@@ -1,6 +1,7 @@
 import * as React from "react";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Hero from "./components/Hero";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
@@ -31,6 +32,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
+        <Hero />
         <Projects />
       </ThemeProvider>
     </>

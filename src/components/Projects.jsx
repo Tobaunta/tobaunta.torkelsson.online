@@ -4,9 +4,9 @@ import Project from "./Project";
 export default function Projects() {
   let technologies = "";
   return (
-    <Box>
-      <Typography id="projekt" variant="h3" component="h3" sx={{ margin: 5 }}>
-        Projekt
+    <Box id="projekt">
+      <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
+        PROJEKT
       </Typography>
       <Project
         name="Flag-App"

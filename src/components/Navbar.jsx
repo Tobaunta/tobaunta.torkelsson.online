@@ -15,90 +15,32 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const drawerWidth = 240;
-  const navItems = [];
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Tobaunta Torkelsson
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: { xs: "none", sm: "flex" } }}>
       <CssBaseline />
-      <AppBar component="nav" position="static">
+      <AppBar component="nav">
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Box
             sx={{
-              display: { xs: "none", sm: "flex" },
-              justifyContent: { xs: "none", sm: "space-between" },
+              display: "flex",
+              justifyContent: "space-between",
               width: "100%",
             }}
           >
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ display: { xs: "none", sm: "block" } }}
-            >
+            <Typography variant="h6" component="div" sx={{ display: "block" }}>
               Tobaunta Torkelsson
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
-              ))}
+            <Box>
+              <Button href="#om-mig" sx={{ color: "#fff" }}>
+                OM MIG
+              </Button>
+              <Button href="#projekt" sx={{ color: "#fff" }}>
+                PROJEKT
+              </Button>
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
-      <nav>
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
     </Box>
   );
 }
