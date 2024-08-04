@@ -54,7 +54,7 @@ export default function Navbar({ english, setEnglish }) {
               </Button>
               <Box
                 component="img"
-                src={english ? "/swedish-flag.png" : "/english-flag.png"}
+                src={english ? "/flags/swedish-flag.png" : "/flags/english-flag.png"}
                 sx={{ width: 20, cursor: "pointer" }}
                 onClick={() => setEnglish(!english)}
               />

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
 import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
@@ -34,6 +35,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Navbar english={english} setEnglish={setEnglish} />
         <Hero english={english} />
+        <Skills english={english} />
         <Projects english={english} />
       </ThemeProvider>
     </>
