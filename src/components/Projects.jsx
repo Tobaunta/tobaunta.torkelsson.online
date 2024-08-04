@@ -4,7 +4,7 @@ import Project from "./Project";
 export default function Projects({ english }) {
   let technologies = "";
   return (
-    <Box id="projekt">
+    <Box id="projects">
       <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
         {english ? "PROJECTS" : "PROJEKT"}
       </Typography>

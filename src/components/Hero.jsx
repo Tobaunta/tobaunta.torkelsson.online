@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 export default function Hero({ english }) {
   return (
     <Box
-      id="om-mig"
+      id="about"
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}

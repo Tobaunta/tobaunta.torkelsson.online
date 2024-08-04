@@ -46,10 +46,13 @@ export default function Navbar({ english, setEnglish }) {
               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Button href="#om-mig" sx={{ color: "#fff" }}>
+              <Button href="#about" sx={{ color: "#fff" }}>
                 {english ? "ABOUT ME" : "OM MIG"}
               </Button>
-              <Button href="#projekt" sx={{ color: "#fff" }}>
+              <Button href="#skills" sx={{ color: "#fff" }}>
+                {english ? "SKILLS" : "KOMPETENSER"}
+              </Button>
+              <Button href="#projects" sx={{ color: "#fff" }}>
                 {english ? "PROJECTS" : "PROJEKT"}
               </Button>
               <Box

@@ -12,7 +12,7 @@ export default function Skills({ english }) {
     { name: "Git", src: "/skills/git.svg" },
   ];
   return (
-    <Box id="om">
+    <Box id="skills">
       <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
         {english ? "SKILLS" : "KOMPETENSER"}
       </Typography>
