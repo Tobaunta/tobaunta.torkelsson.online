@@ -2,19 +2,15 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
 
 export default function Navbar() {
+  function linkTo(url) {
+    return () => window.open(url, "_blank");
+  }
   return (
     <Box sx={{ display: { xs: "none", sm: "flex" } }}>
       <CssBaseline />
@@ -27,9 +23,18 @@ export default function Navbar() {
               width: "100%",
             }}
           >
-            <Typography variant="h6" component="div" sx={{ display: "block" }}>
-              Tobaunta Torkelsson
-            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ display: "block" }}
+              >
+                Tobaunta Torkelsson
+              </Typography>
+              <GitHub sx={{ cursor: "pointer" }} onClick={linkTo("https://github.com/tobaunta")} />
+              <LinkedIn sx={{ cursor: "pointer" }} onClick={linkTo("https://www.linkedin.com/in/tobaunta-torkelsson")} />
+              <Mail sx={{ cursor: "pointer" }} onClick={linkTo("mailto:tobauntat@gmail.com")} />
+            </Box>
             <Box>
               <Button href="#om-mig" sx={{ color: "#fff" }}>
                 OM MIG
