@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Hero from "./components/Hero";
@@ -28,14 +28,14 @@ const theme = createTheme({
 });
 
 export default function App() {
+  const [english, setEnglish] = useState(false);
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navbar />
-        <Hero />
-        <Projects />
+        <Navbar english={english} setEnglish={setEnglish} />
+        <Hero english={english} />
+        <Projects english={english} />
       </ThemeProvider>
     </>
   );
 }
-

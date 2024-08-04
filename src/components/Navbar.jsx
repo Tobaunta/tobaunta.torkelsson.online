@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
 
-export default function Navbar() {
+export default function Navbar({ english, setEnglish }) {
   function linkTo(url) {
     return () => window.open(url, "_blank");
   }
@@ -31,17 +30,34 @@ export default function Navbar() {
               >
                 Tobaunta Torkelsson
               </Typography>
-              <GitHub sx={{ cursor: "pointer" }} onClick={linkTo("https://github.com/tobaunta")} />
-              <LinkedIn sx={{ cursor: "pointer" }} onClick={linkTo("https://www.linkedin.com/in/tobaunta-torkelsson")} />
-              <Mail sx={{ cursor: "pointer" }} onClick={linkTo("mailto:tobauntat@gmail.com")} />
+              <GitHub
+                sx={{ cursor: "pointer" }}
+                onClick={linkTo("https://github.com/tobaunta")}
+              />
+              <LinkedIn
+                sx={{ cursor: "pointer" }}
+                onClick={linkTo(
+                  "https://www.linkedin.com/in/tobaunta-torkelsson"
+                )}
+              />
+              <Mail
+                sx={{ cursor: "pointer" }}
+                onClick={linkTo("mailto:tobauntat@gmail.com")}
+              />
             </Box>
-            <Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Button href="#om-mig" sx={{ color: "#fff" }}>
-                OM MIG
+                {english ? "ABOUT ME" : "OM MIG"}
               </Button>
               <Button href="#projekt" sx={{ color: "#fff" }}>
-                PROJEKT
+                {english ? "PROJECTS" : "PROJEKT"}
               </Button>
+              <Box
+                component="img"
+                src={english ? "/swedish-flag.png" : "/english-flag.png"}
+                sx={{ width: 20, cursor: "pointer" }}
+                onClick={() => setEnglish(!english)}
+              />
             </Box>
           </Box>
         </Toolbar>
