@@ -6,7 +6,7 @@ export default function Projects({ english }) {
   return (
     <Box id="projekt">
       <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
-        PROJEKT
+        {english ? "PROJECTS" : "PROJEKT"}
       </Typography>
       <Project
         name={english ? "Flag-App" : "Flagg-App"}
