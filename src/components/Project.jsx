@@ -17,7 +17,11 @@ export default function Project({
     return () => window.open(url, "_blank");
   }
   const technologiesChips = technologies.map((technology, i) => (
-    <Chip key={i} label={technology} sx={{ cursor: "default", backgroundColor: "#8697c4", color: "#fff" }} />
+    <Chip
+      key={i}
+      label={technology}
+      sx={{ cursor: "default", backgroundColor: "#8697c4", color: "#fff" }}
+    />
   ));
   return (
     <Container>
@@ -44,7 +48,10 @@ export default function Project({
               sx={{ cursor: "pointer", mr: 1, color: "#8697c4" }}
               onClick={linkTo(github)}
             />
-            <OpenInNewIcon sx={{ cursor: "pointer", color: "#8697c4" }} onClick={linkTo(demo)} />
+            <OpenInNewIcon
+              sx={{ cursor: "pointer", color: "#8697c4" }}
+              onClick={linkTo(demo)}
+            />
           </Box>
         </Box>
         <Box display={"flex"} flexDirection={"column"} gap={3}>
@@ -52,7 +59,7 @@ export default function Project({
             component="img"
             src={image}
             alt={name}
-            sx={{ width: {md: "350px", sm: "350px", xs: "280px"} }}
+            sx={{ width: { md: "350px", sm: "350px", xs: "280px" } }}
           />
           <Box
             display={"flex"}

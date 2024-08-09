@@ -17,7 +17,14 @@ export default function Projects({ english }) {
         }
         image="/projects/spotify-clone.png"
         technologies={
-          (technologies = ["HTML", "CSS", "React", "Material UI", "Spotify API", "Spotify Playback SDK"])
+          (technologies = [
+            "HTML",
+            "CSS",
+            "React",
+            "Material UI",
+            "Spotify API",
+            "Spotify Playback SDK",
+          ])
         }
         github="https://github.com/Tobaunta/spotify-clone"
         demo="https://spotify.tobaunta.torkelsson.online"
