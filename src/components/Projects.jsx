@@ -9,6 +9,20 @@ export default function Projects({ english }) {
         {english ? "PROJECTS" : "PROJEKT"}
       </Typography>
       <Project
+        name={english ? "Spotify-Clone" : "Spotify-Klon"}
+        description={
+          english
+            ? "Built a web-based music streaming platform using React and Material UI. Integrating the Spotify API created a seamless user experience for listening to music. The application is optimized for both mobile devices and desktop computers."
+            : "Konstruerade en webbaserad musikstreaming-plattform med React och Material UI. Genom att integrera Spotify API skapades en sömlös användarupplevelse för att lyssna på musik. Applikationen är optimerad för både mobila enheter och stationära datorer."
+        }
+        image="/projects/spotify-clone.png"
+        technologies={
+          (technologies = ["HTML", "CSS", "React", "Material UI", "Spotify API", "Spotify Playback SDK"])
+        }
+        github="https://github.com/Tobaunta/spotify-clone"
+        demo="https://spotify.tobaunta.torkelsson.online"
+      />
+      <Project
         name={english ? "Flag-App" : "Flagg-App"}
         description={
           english
