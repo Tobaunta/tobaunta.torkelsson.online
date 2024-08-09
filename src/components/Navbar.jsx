@@ -21,7 +21,7 @@ export default function Navbar({ english, setEnglish }) {
               alignItems: "center",
               justifyContent: "space-between",
               width: "100%",
-              maxWidth: 1200,
+              maxWidth: 1140,
               margin: "0 auto",
             }}
           >
