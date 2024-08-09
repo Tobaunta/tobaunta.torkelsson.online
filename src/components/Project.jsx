@@ -45,11 +45,11 @@ export default function Project({
           <Box>{description}</Box>
           <Box>
             <GitHubIcon
-              sx={{ cursor: "pointer", mr: 1, color: "#8697c4" }}
+              sx={{ cursor: "pointer", mr: 1, color: "#8697c4", fontSize: "40px" }}
               onClick={linkTo(github)}
             />
             <OpenInNewIcon
-              sx={{ cursor: "pointer", color: "#8697c4" }}
+              sx={{ cursor: "pointer", color: "#8697c4", fontSize: "40px" }}
               onClick={linkTo(demo)}
             />
           </Box>

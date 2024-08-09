@@ -53,7 +53,7 @@ export default function Navbar({ english, setEnglish }) {
               />
               <Download
                 sx={{ cursor: "pointer" }}
-                onClick={linkTo("/CV.pdf")}
+                onClick={linkTo("/cv.pdf")}
               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
