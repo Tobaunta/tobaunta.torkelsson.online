@@ -4,7 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { GitHub, LinkedIn, Mail, Phone } from "@mui/icons-material";
+import { GitHub, LinkedIn, Mail, Phone, Download } from "@mui/icons-material";
 
 export default function Navbar({ english, setEnglish }) {
   function linkTo(url) {
@@ -50,6 +50,10 @@ export default function Navbar({ english, setEnglish }) {
               <Phone
                 sx={{ cursor: "pointer" }}
                 onClick={linkTo("tel:+46709594341")}
+              />
+              <Download
+                sx={{ cursor: "pointer" }}
+                onClick={linkTo("/CV.pdf")}
               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
