@@ -12,17 +12,11 @@ export default function Skills({ english }) {
     { name: "Git", src: "/skills/git.svg" },
   ];
   return (
-    <Box id="skills">
-      <Typography variant="h2" sx={{ margin: 5 }}>
+    <Box id="skills" sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2, p: 3 }}>
+      <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
         {english ? "SKILLS" : "KOMPETENSER"}
       </Typography>
-      <Box
-        display="flex"
-        gap={3}
-        alignContent={"center"}
-        justifyContent={"center"}
-        flexWrap={"wrap"}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
         {skills.map((skill, i) => (
           <Box
             key={i}
@@ -36,7 +30,7 @@ export default function Skills({ english }) {
               height: 150,
             }}
           >
-            <Typography variant="h5">{skill.name}</Typography>
+            <Typography sx={{ fontSize: 20 }}>{skill.name}</Typography>
             <Box
               component={"img"}
               src={skill.src}

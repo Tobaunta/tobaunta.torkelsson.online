@@ -13,7 +13,7 @@ export default function Navbar({ english, setEnglish }) {
     return () => window.open(url, "_blank");
   }
   return (
-    <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar>
         <Toolbar>
@@ -47,19 +47,21 @@ export default function Navbar({ english, setEnglish }) {
               <Phone cursor="pointer" onClick={linkTo("tel:+46709594341")} />
               <Download cursor="pointer" onClick={linkTo("./cv.pdf")} />
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Button href="#hero" sx={{ color: "#fff" }}>
-                {english ? "HOME" : "HEM"}
-              </Button>
-              <Button href="#about" sx={{ color: "#fff" }}>
-                {english ? "ABOUT ME" : "OM MIG"}
-              </Button>
-              <Button href="#skills" sx={{ color: "#fff" }}>
-                {english ? "SKILLS" : "KOMPETENSER"}
-              </Button>
-              <Button href="#projects" sx={{ color: "#fff" }}>
-                {english ? "PROJECTS" : "PROJEKT"}
-              </Button>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: { xs: "none", md: "flex" }}}>
+                <Button href="#hero" sx={{ color: "#fff" }}>
+                  {english ? "HOME" : "HEM"}
+                </Button>
+                <Button href="#about" sx={{ color: "#fff" }}>
+                  {english ? "ABOUT ME" : "OM MIG"}
+                </Button>
+                <Button href="#skills" sx={{ color: "#fff" }}>
+                  {english ? "SKILLS" : "KOMPETENSER"}
+                </Button>
+                <Button href="#projects" sx={{ color: "#fff" }}>
+                  {english ? "PROJECTS" : "PROJEKT"}
+                </Button>
+              </Box>
               <Box
                 component="img"
                 src={

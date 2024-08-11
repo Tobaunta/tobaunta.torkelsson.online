@@ -16,6 +16,7 @@ export default function Project({
   technologies,
   github,
   demo,
+  variant,
 }) {
   function linkTo(url) {
     return () => window.open(url, "_blank");
@@ -32,47 +33,59 @@ export default function Project({
       }}
     />
   ));
+
+  const txtGrid = (
+    <Grid item xs={8} sx={{ display: "flex", flexDirection: "column", px: 3 }}>
+      <Typography sx={{ fontSize: 30 }}>{name}</Typography>
+      <Divider sx={{ width: "50%", my: 2, mx: "auto" }} />
+      <Typography sx={{ fontSize: 15 }}>{description}</Typography>
+      <Box m={1}>
+        <Button color="primary" onClick={linkTo(github)}>
+          <GitHub />
+          <Typography variant="button">GITHUB</Typography>
+        </Button>
+        <Button color="primary" onClick={linkTo(demo)}>
+          <OpenInNew />
+          <Typography variant="button">DEMO</Typography>
+        </Button>
+      </Box>
+      <Box>{technologiesChips}</Box>
+    </Grid>
+  );
+
+  const imgGrid = (
+    <Grid item xs={4} sx={{ alignContent: "center" }}>
+      <Box
+        component="img"
+        src={image}
+        alt={name}
+        width={"100%"}
+        alignSelf={"center"}
+      />
+    </Grid>
+  );
+
   return (
-    <Container>
+    <Container
+      sx={{
+        border: "1px solid lightgray",
+        borderRadius: "10px",
+        my: 3,
+      }}
+    >
       <Grid
         container
-        p={2}
-        spacing={2}
-        m={3}
         sx={{
-          border: "1px solid lightgray",
-          borderRadius: "10px",
-          flexDirection: { md: "row", sm: "column", xs: "column" },
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
+          justifyContent: "center",
+          my: 3,
         }}
       >
-        <Grid
-          item
-          xs={8}
-          sx={{ display: "flex", flexDirection: "column", p: 3 }}
-        >
-          <Typography variant="h4">
-            {name}
-          </Typography>
-          <Divider sx={{ width: "50%", my: 2, mx: "auto" }} />
-          <Typography variant="string">
-            {description}
-          </Typography>
-          <Box m={1}>
-            <Button color="primary" onClick={linkTo(github)}>
-              <GitHub />
-              <Typography variant="button">GITHUB</Typography>
-            </Button>
-            <Button color="primary" onClick={linkTo(demo)}>
-              <OpenInNew />
-              <Typography variant="button">DEMO</Typography>
-            </Button>
-          </Box>
-          <Box>{technologiesChips}</Box>
-        </Grid>
-        <Grid item xs={4}>
-          <Box component="img" src={image} alt={name} width={"100%"} />
-        </Grid>
+        {variant === "img-left" || window.innerWidth < 900
+          ? [imgGrid, txtGrid]
+          : [txtGrid, imgGrid]}
       </Grid>
     </Container>
   );

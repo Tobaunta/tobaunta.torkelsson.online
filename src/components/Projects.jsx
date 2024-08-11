@@ -5,7 +5,7 @@ export default function Projects({ english }) {
   let technologies = "";
   return (
     <Box id="projects">
-      <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
+      <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
         {english ? "PROJECTS" : "PROJEKT"}
       </Typography>
       <Project
@@ -42,6 +42,7 @@ export default function Projects({ english }) {
         }
         github="https://github.com/Tobaunta/flag-app"
         demo="https://flag-app.tobaunta.torkelsson.online"
+        variant={'img-left'}
       />
       <Project
         name="Klarna Checkout"
@@ -73,6 +74,7 @@ export default function Projects({ english }) {
         technologies={(technologies = ["HTML", "CSS", "JavaScript"])}
         github="https://github.com/Tobaunta/password-generator"
         demo="https://password-generator.tobaunta.torkelsson.online"
+        variant={'img-left'}
       />
       <Project
         name={english ? "SL Deduction Calculator" : "SL Reklamationsberäknare"}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createTheme, Divider, ThemeProvider } from "@mui/material";
+import { Container, createTheme, Divider, ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -33,16 +33,18 @@ export default function App() {
   const [english, setEnglish] = useState(false);
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Navbar english={english} setEnglish={setEnglish} />
-        <Hero english={english} />
-        <Divider sx={{ my: 10 }} />
-        <About english={english} />
-        <Divider sx={{ my: 10 }} />
-        <Skills english={english} />
-        <Divider sx={{ my: 10 }} />
-        <Projects english={english} />
-      </ThemeProvider>
+      <Container sx={{ padding: 2, margin: 'auto' }}>
+        <ThemeProvider theme={theme}>
+          <Navbar english={english} setEnglish={setEnglish} />
+          <Hero english={english} />
+          <Divider sx={{ my: 10 }} />
+          <About english={english} />
+          <Divider sx={{ my: 10 }} />
+          <Skills english={english} />
+          <Divider sx={{ my: 10 }} />
+          <Projects english={english} />
+        </ThemeProvider>
+      </Container>
     </>
   );
 }
