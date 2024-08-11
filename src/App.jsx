@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { createTheme, Divider, ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 const theme = createTheme({
@@ -35,7 +36,11 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Navbar english={english} setEnglish={setEnglish} />
         <Hero english={english} />
+        <Divider sx={{ my: 10 }} />
+        <About english={english} />
+        <Divider sx={{ my: 10 }} />
         <Skills english={english} />
+        <Divider sx={{ my: 10 }} />
         <Projects english={english} />
       </ThemeProvider>
     </>

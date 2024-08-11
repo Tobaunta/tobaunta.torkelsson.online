@@ -13,7 +13,7 @@ export default function Skills({ english }) {
   ];
   return (
     <Box id="skills">
-      <Typography variant="h2" component="h2" sx={{ margin: 5 }}>
+      <Typography variant="h2" sx={{ margin: 5 }}>
         {english ? "SKILLS" : "KOMPETENSER"}
       </Typography>
       <Box
@@ -29,8 +29,9 @@ export default function Skills({ english }) {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "space-between",
               alignItems: "center",
+              flexWrap: "wrap",
               gap: 2,
               height: 150,
             }}

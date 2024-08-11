@@ -1,9 +1,13 @@
-import * as React from "react";
-import Chip from "@mui/material/Chip";
-import Box from "@mui/material/Box";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import Container from "@mui/material/Container";
+import {
+  Container,
+  Grid,
+  Box,
+  Chip,
+  Typography,
+  Button,
+  Divider,
+} from "@mui/material";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 
 export default function Project({
   name,
@@ -20,58 +24,56 @@ export default function Project({
     <Chip
       key={i}
       label={technology}
-      sx={{ cursor: "default", backgroundColor: "#8697c4", color: "#fff" }}
+      sx={{
+        cursor: "default",
+        backgroundColor: "primary.main",
+        color: "#fff",
+        m: 1,
+      }}
     />
   ));
   return (
     <Container>
-      <Box
-        my={2}
-        display="flex"
-        alignItems="center"
-        flexDirection="row"
-        gap={1}
-        p={3}
+      <Grid
+        container
+        p={2}
+        spacing={2}
+        m={3}
         sx={{
           border: "1px solid lightgray",
           borderRadius: "10px",
           flexDirection: { md: "row", sm: "column", xs: "column" },
+          alignItems: "center",
         }}
       >
-        <Box display={"flex"} flexDirection={"column"} gap={3}>
-          <Box fontWeight={"bold"} fontSize={"24px"}>
+        <Grid
+          item
+          xs={8}
+          sx={{ display: "flex", flexDirection: "column", p: 3 }}
+        >
+          <Typography variant="h4">
             {name}
+          </Typography>
+          <Divider sx={{ width: "50%", my: 2, mx: "auto" }} />
+          <Typography variant="string">
+            {description}
+          </Typography>
+          <Box m={1}>
+            <Button color="primary" onClick={linkTo(github)}>
+              <GitHub />
+              <Typography variant="button">GITHUB</Typography>
+            </Button>
+            <Button color="primary" onClick={linkTo(demo)}>
+              <OpenInNew />
+              <Typography variant="button">DEMO</Typography>
+            </Button>
           </Box>
-          <Box>{description}</Box>
-          <Box>
-            <GitHubIcon
-              sx={{ cursor: "pointer", mr: 1, color: "#8697c4", fontSize: "40px" }}
-              onClick={linkTo(github)}
-            />
-            <OpenInNewIcon
-              sx={{ cursor: "pointer", color: "#8697c4", fontSize: "40px" }}
-              onClick={linkTo(demo)}
-            />
-          </Box>
-        </Box>
-        <Box display={"flex"} flexDirection={"column"} gap={3}>
-          <Box
-            component="img"
-            src={image}
-            alt={name}
-            sx={{ width: { md: "350px", sm: "350px", xs: "280px" } }}
-          />
-          <Box
-            display={"flex"}
-            gap={1}
-            flexWrap={"wrap"}
-            justifyContent={"center"}
-            alignContent={"center"}
-          >
-            {technologiesChips}
-          </Box>
-        </Box>
-      </Box>
+          <Box>{technologiesChips}</Box>
+        </Grid>
+        <Grid item xs={4}>
+          <Box component="img" src={image} alt={name} width={"100%"} />
+        </Grid>
+      </Grid>
     </Container>
   );
 }
