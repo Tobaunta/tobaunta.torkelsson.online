@@ -30,23 +30,24 @@ export default function Project({
         backgroundColor: "primary.main",
         color: "#fff",
         m: 1,
+        fontSize: { xs: 10, md: 15 },
       }}
     />
   ));
 
   const txtGrid = (
-    <Grid item xs={8} sx={{ display: "flex", flexDirection: "column", px: 3 }}>
-      <Typography sx={{ fontSize: 30 }}>{name}</Typography>
+    <Grid item xs={8} sx={{ display: "flex", flexDirection: "column", px: { xs: 0, md: 3 } }}>
+      <Typography sx={{ fontSize: { xs: 15, md: 30 } }} >{name}</Typography>
       <Divider sx={{ width: "50%", my: 2, mx: "auto" }} />
-      <Typography sx={{ fontSize: 15 }}>{description}</Typography>
+      <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>{description}</Typography>
       <Box m={1}>
         <Button color="primary" onClick={linkTo(github)}>
           <GitHub />
-          <Typography variant="button">GITHUB</Typography>
+          <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>GITHUB</Typography>
         </Button>
         <Button color="primary" onClick={linkTo(demo)}>
           <OpenInNew />
-          <Typography variant="button">DEMO</Typography>
+          <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>DEMO</Typography>
         </Button>
       </Box>
       <Box>{technologiesChips}</Box>
@@ -54,7 +55,7 @@ export default function Project({
   );
 
   const imgGrid = (
-    <Grid item xs={4} sx={{ alignContent: "center" }}>
+    <Grid item xs={10} md={4} sx={{ alignContent: "center" }}>
       <Box
         component="img"
         src={image}

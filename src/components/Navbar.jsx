@@ -29,8 +29,8 @@ export default function Navbar({ english, setEnglish }) {
               margin: "0 auto",
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Typography variant="h6" display="block">
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Typography sx={{ fontSize: { xs: 12, md: 20 } }} display="block">
                 Tobaunta Torkelsson
               </Typography>
               <GitHub
