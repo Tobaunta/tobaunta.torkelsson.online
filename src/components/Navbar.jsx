@@ -12,6 +12,9 @@ export default function Navbar({ english, setEnglish }) {
   function linkTo(url) {
     return () => window.open(url, "_blank");
   }
+  function scrollTo(id) {
+    return () => window.scrollTo(0, document.getElementById(id).offsetTop - 64);
+  }
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -49,16 +52,16 @@ export default function Navbar({ english, setEnglish }) {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Box sx={{ display: { xs: "none", md: "flex" }}}>
-                <Button href="#hero" sx={{ color: "#fff" }}>
+                <Button sx={{ color: "#fff" }} onClick={scrollTo("hero")}>
                   {english ? "HOME" : "HEM"}
                 </Button>
-                <Button href="#about" sx={{ color: "#fff" }}>
+                <Button sx={{ color: "#fff" }} onClick={scrollTo("about")}>
                   {english ? "ABOUT ME" : "OM MIG"}
                 </Button>
-                <Button href="#skills" sx={{ color: "#fff" }}>
+                <Button sx={{ color: "#fff" }} onClick={scrollTo("skills")}>
                   {english ? "SKILLS" : "KOMPETENSER"}
                 </Button>
-                <Button href="#projects" sx={{ color: "#fff" }}>
+                <Button sx={{ color: "#fff" }} onClick={scrollTo("projects")}>
                   {english ? "PROJECTS" : "PROJEKT"}
                 </Button>
               </Box>
