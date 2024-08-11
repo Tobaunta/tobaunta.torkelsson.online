@@ -33,7 +33,7 @@ export default function App() {
   const [english, setEnglish] = useState(false);
   return (
     <>
-      <Container sx={{ padding: 2, margin: 'auto' }}>
+      <Container sx={{ padding: 2, margin: "auto" }}>
         <ThemeProvider theme={theme}>
           <Navbar english={english} setEnglish={setEnglish} />
           <Hero english={english} />

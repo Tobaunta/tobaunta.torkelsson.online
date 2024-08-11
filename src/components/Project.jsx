@@ -36,10 +36,16 @@ export default function Project({
   ));
 
   const txtGrid = (
-    <Grid item xs={8} sx={{ display: "flex", flexDirection: "column", px: { xs: 0, md: 3 } }}>
-      <Typography sx={{ fontSize: { xs: 15, md: 30 } }} >{name}</Typography>
+    <Grid
+      item
+      xs={8}
+      sx={{ display: "flex", flexDirection: "column", px: { xs: 0, md: 3 } }}
+    >
+      <Typography sx={{ fontSize: { xs: 15, md: 30 } }}>{name}</Typography>
       <Divider sx={{ width: "50%", my: 2, mx: "auto" }} />
-      <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>{description}</Typography>
+      <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>
+        {description}
+      </Typography>
       <Box m={1}>
         <Button color="primary" onClick={linkTo(github)}>
           <GitHub />

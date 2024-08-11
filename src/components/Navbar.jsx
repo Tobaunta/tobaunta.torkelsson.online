@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Box,
-  CssBaseline,
-  Button,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, CssBaseline, Button, Toolbar } from "@mui/material";
 import { GitHub, LinkedIn, Mail, Phone, Download } from "@mui/icons-material";
 
 export default function Navbar({ english, setEnglish }) {
@@ -16,7 +9,7 @@ export default function Navbar({ english, setEnglish }) {
     return () => window.scrollTo(0, document.getElementById(id).offsetTop - 64);
   }
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar>
         <Toolbar>
@@ -29,10 +22,7 @@ export default function Navbar({ english, setEnglish }) {
               margin: "0 auto",
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Typography sx={{ fontSize: { xs: 12, md: 20 } }} display="block">
-                Tobaunta Torkelsson
-              </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <GitHub
                 cursor="pointer"
                 onClick={linkTo("https://github.com/tobaunta")}
@@ -50,8 +40,8 @@ export default function Navbar({ english, setEnglish }) {
               <Phone cursor="pointer" onClick={linkTo("tel:+46709594341")} />
               <Download cursor="pointer" onClick={linkTo("./cv.pdf")} />
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Box sx={{ display: { xs: "none", md: "flex" }}}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <Button sx={{ color: "#fff" }} onClick={scrollTo("hero")}>
                   {english ? "HOME" : "HEM"}
                 </Button>

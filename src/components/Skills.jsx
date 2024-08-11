@@ -12,11 +12,29 @@ export default function Skills({ english }) {
     { name: "Git", src: "/skills/git.svg" },
   ];
   return (
-    <Box id="skills" sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2, p: 3 }}>
+    <Box
+      id="skills"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 2,
+        p: 3,
+      }}
+    >
       <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
         {english ? "SKILLS" : "KOMPETENSER"}
       </Typography>
-      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 2,
+          flexWrap: "wrap",
+        }}
+      >
         {skills.map((skill, i) => (
           <Box
             key={i}

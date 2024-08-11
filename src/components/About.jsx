@@ -4,7 +4,14 @@ export default function About({ english }) {
   return (
     <Box
       id="about"
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2, p: 3 }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 2,
+        p: 3,
+      }}
     >
       <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
         {english ? "ABOUT ME" : "OM MIG"}

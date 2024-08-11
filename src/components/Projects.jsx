@@ -42,7 +42,7 @@ export default function Projects({ english }) {
         }
         github="https://github.com/Tobaunta/flag-app"
         demo="https://flag-app.tobaunta.torkelsson.online"
-        variant={'img-left'}
+        variant={"img-left"}
       />
       <Project
         name="Klarna Checkout"
@@ -74,7 +74,7 @@ export default function Projects({ english }) {
         technologies={(technologies = ["HTML", "CSS", "JavaScript"])}
         github="https://github.com/Tobaunta/password-generator"
         demo="https://password-generator.tobaunta.torkelsson.online"
-        variant={'img-left'}
+        variant={"img-left"}
       />
       <Project
         name={english ? "SL Deduction Calculator" : "SL Reklamationsberäknare"}
