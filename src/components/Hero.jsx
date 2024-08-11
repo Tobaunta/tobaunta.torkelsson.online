@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 
 export default function Hero({ english }) {
   return (
@@ -10,6 +10,7 @@ export default function Hero({ english }) {
         justifyContent: "center",
         alignItems: "center",
         gap: 2,
+        height: "100vh",
       }}
     >
       <Box
@@ -22,6 +23,7 @@ export default function Hero({ english }) {
         <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
           Tobaunta Torkelsson
         </Typography>
+        <Divider sx={{ my: 3 }} />
         <Typography sx={{ fontSize: { xs: 20, md: 40 } }}>
           MERN Stack
           {english ? " Web Developer" : " Webbutvecklare"}
