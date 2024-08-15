@@ -54,6 +54,9 @@ export default function Navbar({ english, setEnglish }) {
                 <Button sx={{ color: "#fff" }} onClick={scrollTo("projects")}>
                   {english ? "PROJECTS" : "PROJEKT"}
                 </Button>
+                <Button sx={{ color: "#fff" }} onClick={linkTo("./cv.pdf")}>
+                  {english ? "RESUME" : "CV"}
+                </Button>
               </Box>
               <Box
                 component="img"

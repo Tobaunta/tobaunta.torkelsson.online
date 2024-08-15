@@ -10,15 +10,9 @@ export default function Hero({ english }) {
         justifyContent: "center",
         alignItems: "center",
         gap: 2,
-        height: "100vh",
+        height: "90vh",
       }}
     >
-      <Box
-        component="img"
-        src="./hero-img.png"
-        alt="Hero Image"
-        sx={{ width: "70%", height: "auto" }}
-      />
       <Box>
         <Typography sx={{ fontSize: { xs: 30, md: 60 } }}>
           Tobaunta Torkelsson
@@ -29,6 +23,12 @@ export default function Hero({ english }) {
           {english ? " Web Developer" : " Webbutvecklare"}
         </Typography>
       </Box>
+      <Box
+        component="img"
+        src="./hero.png"
+        alt="Hero Image"
+        sx={{ width: "50%", height: "auto" }}
+      />
     </Box>
   );
 }
