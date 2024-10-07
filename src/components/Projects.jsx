@@ -27,7 +27,7 @@ export default function Projects({ english }) {
           ])
         }
         github="https://github.com/Tobaunta/spotify-clone"
-        demo="https://spotify.tobaunta.torkelsson.online"
+        demo="https://spotify-clone.tobaunta.torkelsson.online"
       />
       <Project
         name={english ? "Flag-App" : "Flagg-App"}
@@ -61,7 +61,7 @@ export default function Projects({ english }) {
           ])
         }
         github="https://github.com/Tobaunta/klarna-checkout"
-        demo="https://klarna-checkout-wazc.onrender.com"
+        demo="https://klarna-checkout.tobaunta.torkelsson.online"
       />
       <Project
         name={english ? "Password Generator" : "Lösenordsgenerator"}
