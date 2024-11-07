@@ -1,5 +1,14 @@
-import { AppBar, Box, CssBaseline, Button, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Button,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import { GitHub, LinkedIn, Mail, Phone, Download } from "@mui/icons-material";
+import sweFlag from "../assets/flags/swe.png";
+import engFlag from "../assets/flags/eng.png";
 
 export default function Navbar({ english, setEnglish }) {
   function linkTo(url) {
@@ -23,6 +32,7 @@ export default function Navbar({ english, setEnglish }) {
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+              <Typography>Tobaunta Torkelsson</Typography>
               <GitHub
                 cursor="pointer"
                 onClick={linkTo("https://github.com/tobaunta")}
@@ -35,10 +45,9 @@ export default function Navbar({ english, setEnglish }) {
               />
               <Mail
                 cursor="pointer"
-                onClick={linkTo("mailto:tobauntat@gmail.com")}
+                onClick={linkTo("mailto:tobaunta@torkelsson.online")}
               />
               <Phone cursor="pointer" onClick={linkTo("tel:+46709594341")} />
-              <Download cursor="pointer" onClick={linkTo("./cv.pdf")} />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -54,17 +63,10 @@ export default function Navbar({ english, setEnglish }) {
                 <Button sx={{ color: "#fff" }} onClick={scrollTo("projects")}>
                   {english ? "PROJECTS" : "PROJEKT"}
                 </Button>
-                <Button sx={{ color: "#fff" }} onClick={linkTo("./cv.pdf")}>
-                  {english ? "RESUME" : "CV"}
-                </Button>
               </Box>
               <Box
                 component="img"
-                src={
-                  english
-                    ? "./flags/swedish-flag.png"
-                    : "./flags/english-flag.png"
-                }
+                src={english ? engFlag : sweFlag}
                 sx={{ width: 20, cursor: "pointer" }}
                 onClick={() => setEnglish(!english)}
               />

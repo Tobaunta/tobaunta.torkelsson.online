@@ -27,8 +27,9 @@ export default function Project({
       label={technology}
       sx={{
         cursor: "default",
-        backgroundColor: "primary.main",
-        color: "#fff",
+        backgroundColor: "background.default",
+        color: "primary.main",
+        border: "1px solid",
         m: 1,
         fontSize: { xs: 10, md: 15 },
       }}
@@ -47,14 +48,20 @@ export default function Project({
         {description}
       </Typography>
       <Box m={1}>
-        <Button color="primary" onClick={linkTo(github)}>
-          <GitHub />
-          <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>GITHUB</Typography>
-        </Button>
-        <Button color="primary" onClick={linkTo(demo)}>
-          <OpenInNew />
-          <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>DEMO</Typography>
-        </Button>
+        {github && (
+          <Button color="primary" onClick={linkTo(github)}>
+            <GitHub />
+            <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>
+              GITHUB
+            </Typography>
+          </Button>
+        )}
+        {demo && (
+          <Button color="primary" onClick={linkTo(demo)}>
+            <OpenInNew />
+            <Typography sx={{ fontSize: { xs: 10, md: 15 } }}>DEMO</Typography>
+          </Button>
+        )}
       </Box>
       <Box>{technologiesChips}</Box>
     </Grid>

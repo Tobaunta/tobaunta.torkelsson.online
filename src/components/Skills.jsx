@@ -1,15 +1,23 @@
 import { Box, Typography } from "@mui/material";
+import html from "../assets/skills/html.svg";
+import css from "../assets/skills/css.svg";
+import javascript from "../assets/skills/javascript.svg";
+import react from "../assets/skills/react.svg";
+import nodejs from "../assets/skills/nodejs.svg";
+import express from "../assets/skills/express.svg";
+import mongodb from "../assets/skills/mongodb.svg";
+import git from "../assets/skills/git.svg";
 
 export default function Skills({ english }) {
   const skills = [
-    { name: "HTML", src: "/skills/html.svg" },
-    { name: "CSS", src: "/skills/css.svg" },
-    { name: "JavaScript", src: "/skills/javascript.svg" },
-    { name: "React", src: "/skills/react.svg" },
-    { name: "Node.js", src: "/skills/nodejs.svg" },
-    { name: "Express", src: "/skills/express.svg" },
-    { name: "MongoDB", src: "/skills/mongodb.svg" },
-    { name: "Git", src: "/skills/git.svg" },
+    { name: "HTML", src: html },
+    { name: "CSS", src: css },
+    { name: "JavaScript", src: javascript },
+    { name: "React", src: react },
+    { name: "Node.js", src: nodejs },
+    { name: "Express", src: express },
+    { name: "MongoDB", src: mongodb },
+    { name: "Git", src: git },
   ];
   return (
     <Box
